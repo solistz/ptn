@@ -23,7 +23,7 @@ def Modify_dict_el():
 def Remove_dict_el():
     pass
 def View_dict_el():
-    pass
+    print('hellow')
 
 def input_dict_el():
     print('ВВедіть число 1 - 4 : ')
