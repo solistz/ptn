@@ -33,6 +33,7 @@ def input_dict_el():
 
 
 def main():
+    print('test commit')
     dictionary_master = {}
     all_function = {Create_dict_el(), Modify_dict_el(), Remove_dict_el(), View_dict_el()}
 
