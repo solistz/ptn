@@ -29,6 +29,7 @@ def input_dict_el():
     print('ВВедіть число 1 - 4 : ')
     number = int(input())
 
+# test commit
 
 
 def main():
@@ -36,7 +37,6 @@ def main():
     all_function = {Create_dict_el(), Modify_dict_el(), Remove_dict_el(), View_dict_el()}
 
     Controller()
-    input_dict_el()
-
+    View_dict_el()
 if __name__ == "__main__":
     main()
