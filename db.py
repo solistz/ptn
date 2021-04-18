@@ -2,7 +2,7 @@
 
 
 #while True:
-def Controller():
+def controller():
     a = ('\n'
     '| 1 - Create '
     '| 2 - Modify '
@@ -12,32 +12,36 @@ def Controller():
     )
     print(a)
 
-
-
-def Create_dict_el():
-    print('CREATE')
-
-def Modify_dict_el():
-    print('MODIFY')
-    
-def Remove_dict_el():
-    pass
-def View_dict_el():
-    print('hellow')
-
-def input_dict_el():
+def input_dictionary_element():
     print('ВВедіть число 1 - 4 : ')
     number = int(input())
+    return number
 
-# test commit
+
+def create_dictionary_element():
+    print('CREATE')
+
+def modify_dictionary_element():
+    print('MODIFY')
+    
+def remove_dictionary_element():
+    pass
+
+def view_dictionary_element():
+    print('hellow')
+
+def all_function_controller():
+    pass
+
+
+
 
 
 def main():
-    print('test commit')
-    dictionary_master = {}
-    all_function = {Create_dict_el(), Modify_dict_el(), Remove_dict_el(), View_dict_el()}
-
-    Controller()
-    View_dict_el()
+    #dictionary_master = {}
+    controller()
+    number_function = input_dictionary_element()
+    print(number_function, type(number_function))
 if __name__ == "__main__":
     main()
+
