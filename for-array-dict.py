@@ -4,8 +4,7 @@ for index in db_array:
     for f,d in index.items():
         if f == dictionary_key:
             print(db_array[f-1])
-            # db_array[f-1[dictionary_key] = 90]
-            db_array[f-1[dictionary_key] = 22]
-            print(db_array)
-
+            db_array[f-1][dictionary_key] = dictionary_value
+            print(db_array[f-1][dictionary_key])
+print(db_array)
         
