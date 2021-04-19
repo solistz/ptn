@@ -5,6 +5,7 @@ for index in db_array:
         if f == dictionary_key:
             print(db_array[f-1])
             # db_array[f-1[dictionary_key] = 90]
-            print(db_array[f-1[dictionary_key] = 22])
+            db_array[f-1[dictionary_key] = 22]
+            print(db_array)
 
         
