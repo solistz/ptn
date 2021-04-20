@@ -48,6 +48,18 @@ def main():
 
         elif user_number_input == 3:
             print(db_array)
+            dictionary_key = input('Key')
+            iteration = 0
+            for index in db_array:
+                for f,d in index.items():
+                    if f == dictionary_key:
+                        print(db_array[iteration])
+                        db_array.pop(iteration)
+                        dictionary_key = None
+                iteration += 1
+            if dictionary_key != None:
+                print('Key is not defined')
+            print(db_array)
         elif user_number_input == 4:
             print(db_array)
         elif user_number_input == 5:
