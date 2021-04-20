@@ -3,7 +3,7 @@ print(db_array)
 while True:
     try:
         dictionary_key = input('Key')
-        if dictionary_key != '':
+        if dictionary_key != :
             break
     except ValueError:
         print('Ви ввели : ', dictionary_key,' спробуйте ще раз')

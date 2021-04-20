@@ -25,21 +25,27 @@ def main():
         user_number_input = controller()
         if user_number_input == 1:
             add_dictionary_input = {}
-            dictionaty_key = int(input('Введіть KEY : '))
-            add_dictionary_input[dictionaty_key] = int(input('Ведіть Value : '))
+            dictionaty_key = input('Введіть KEY : ')
+            add_dictionary_input[dictionaty_key] = input('Ведіть Value : ')
             db_array.append(add_dictionary_input)
             print(db_array)
         elif user_number_input == 2:
             print(db_array)
-            dictionary_key = int(input('Key'))
-            dictionary_value = int(input('Value'))
+            dictionary_key = input('Key')
+            dictionary_value = input('Value')
+            iteration = 0
             for index in db_array:
                 for f,d in index.items():
                     if f == dictionary_key:
-                        print(db_array[f-1])
-                        db_array[f-1][dictionary_key] = dictionary_value
-                        print(db_array[f-1][dictionary_key])
-            print(db_array)            
+                        print(db_array[iteration])
+                        db_array[iteration][dictionary_key] = dictionary_value
+                        print(db_array[iteration][dictionary_key])
+                        dictionary_key = None
+                iteration += 1
+            if dictionary_key != None:
+                print('Key is not defined')
+            print(db_array)
+
         elif user_number_input == 3:
             print(db_array)
         elif user_number_input == 4:
