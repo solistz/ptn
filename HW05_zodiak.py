@@ -4,6 +4,7 @@
 # (постараться сделать без if с помощью словаря!)*
 
 # mounth = {1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
+mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
 
 # zodiak = [
 #     {'vodolei':{1:21,2:18}},
@@ -19,7 +20,6 @@
 #     {'strilez':{11:22,12:21}},
 #     {'kozerog':{12:22,1:19}}
 #     ]
-mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
 zodiak = [
     {'vodolei':[[1,21],[2,18]]},
     {'fish':[[2,19],[3,20]]},
@@ -47,6 +47,10 @@ def operations():
             # print(zodiak_days)
             for zodiak_days_el in range(len(zodiak_days)):
                 print(zodiak_days[zodiak_days_el])
+                for zodiak_days_el1 in zodiak_days[zodiak_days_el]:
+                    mmm = zodiak_days_el1
+                    # if mmm == mounth_user
+
                 # for zodiak_days_el_1 in zodiak_days_el:
                 #     print(zodiak_days_el[zodiak_days_el_1])
 
