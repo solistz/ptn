@@ -3,52 +3,8 @@
 # а на выходе получается знак зодиака 
 # (постараться сделать без if с помощью словаря!)*
 
-# mounth = {1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
-
-# zodiak = [
-#     {'vodolei':{1:21,2:18}},
-#     {'fish':{2:19,3:20}},
-#     {'oven':{3:21,4:20}},
-#     {'telez':{4:21,5:20}},
-#     {'bliznez':{5:21,6:20}},
-#     {'rak':{6:21,7:22}},
-#     {'lev':{7:23,8:22}},
-#     {'diva':{8:23,9:23}},
-#     {'vagi':{9:24,10:23}},
-#     {'skorpion':{10:24,11:21}},
-#     {'strilez':{11:22,12:21}},
-#     {'kozerog':{12:22,1:19}}
-#     ]
-
-# zodiak = [
-#     {'vodolei':[{1:21},{2:18}]},
-#     {'fish':[{2:19},{3:20}]},
-#     {'oven':[{3:21},{4:20}]},
-#     {'telez':[{4:21},{5:20}]},
-#     {'bliznez':[{5:21},{6:20}]},
-#     {'rak':[{6:21},{7:22}]},
-#     {'lev':[{7:23},{8:22}]},
-#     {'diva':[{8:23},{9:23}]},
-#     {'vagi':[{9:24},{10:23}]},
-#     {'skorpion':[{10:24},{11:21}]},
-#     {'strilez':[{11:22},{12:21}]},
-#     {'kozerog':[{12:22},{1:19}]}
-
-# ]
 user_mounth = 5
 user_days = 25
-
-
-mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
-ar = 1
-for itm0 in range(len(mounth)):
-    # print(itm0)
-    ar += mounth[itm0]
-    if user_mounth == itm0:
-        print(ar)
-        break 
-ar += user_days
-print(ar)
 
 
 zodiak = [
@@ -65,6 +21,15 @@ zodiak = [
     {'strilez':[327,356]},
     {'kozerog':[357,365]}
 ]
+mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
+ar = 1
+for itm0 in range(len(mounth)):
+    ar += mounth[itm0]
+    if user_mounth == itm0:
+        break 
+ar += user_days
+print(ar)
+
 
 for itm1 in zodiak:
     for itm2_i,itm2_v in itm1.items():
@@ -73,5 +38,4 @@ for itm1 in zodiak:
                 print('ok',itm2_i)
                 break
 
-print('end')
                     
