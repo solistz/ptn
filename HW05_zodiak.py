@@ -1,41 +1,31 @@
+def zodiaks(day,mounth_user): #функція
+    zodiak = [ # масив - словник - масив
+        {'vodolei':[21,49]},
+        {'fish':[50,80]},
+        {'oven':[81,111]},
+        {'telez':[112,141]},
+        {'bliznez':[142,172]},
+        {'rak':[173,204]},
+        {'lev':[205,235]},
+        {'diva':[236,267]},
+        {'vagi':[268,297]},
+        {'skorpion':[298,326]},
+        {'strilez':[327,356]},
+        {'kozerog':[357,365]},
+        {'kozerog':[1,20]}
+    ]
+    mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
 
-# Написать функцию, в которой передается месяц и день рождения,
-# а на выходе получается знак зодиака 
-# (постараться сделать без if с помощью словаря!)*
+    for mounth_iteration in range(len(mounth) - (len(mounth) - mounth_user)):
+        day += mounth[mounth_iteration]
 
-user_mounth = 5
-user_days = 25
-
-
-zodiak = [
-    {'vodolei':[21,49]},
-    {'fish':[50,80]},
-    {'oven':[81,111]},
-    {'telez':[112,141]},
-    {'bliznez':[142,172]},
-    {'rak':[173,204]},
-    {'lev':[205,235]},
-    {'diva':[236,267]},
-    {'vagi':[268,297]},
-    {'skorpion':[298,326]},
-    {'strilez':[327,356]},
-    {'kozerog':[357,365]}
-]
-mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
-ar = 1
-for itm0 in range(len(mounth)):
-    ar += mounth[itm0]
-    if user_mounth == itm0:
-        break 
-ar += user_days
-print(ar)
+    for zodiak_iteration in zodiak:
+        for zodiak_iteration_dict_index,zodiak_iteration_dict_value in zodiak_iteration.items():
+            # print(zodiak_iteration_dict_index, zodiak_iteration_dict_value)
+            for zodiak_iteration_list in range(len(zodiak_iteration_dict_value)):
+                if day > zodiak_iteration_dict_value[0] and day < zodiak_iteration_dict_value[1]:
+                        print(zodiak_iteration_dict_index)
+                        break
 
 
-for itm1 in zodiak:
-    for itm2_i,itm2_v in itm1.items():
-        for itm3 in range(len(itm2_v)):
-            if ar > itm2_v[0] and ar < itm2_v[1]:
-                print('ok',itm2_i)
-                break
-
-                    
+zodiaks(int(input('Day : ')),int(input('Mounth : ')) - 1)
