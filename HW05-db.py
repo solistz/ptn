@@ -19,46 +19,46 @@ def controller():
             print('Спробуйте ще раз :')
 
 
-def create_db_element(db_temp):
+def create_db_element(db_create):
     add_dictionary_input = {}
     dictionaty_key = input('Введіть KEY : ')
     add_dictionary_input[dictionaty_key] = input('Ведіть Value : ')
-    db_array.append(add_dictionary_input)
-    print(db_array)
+    db_create.append(add_dictionary_input)
+    print(db_create)
 
 
-def modify_db():
-    print(db_array)
+def modify_db(db_modify):
+    print(db_modify)
     dictionary_key = input('Key')
     dictionary_value = input('Value')
     iteration = 0
-    for index in db_array:
+    for index in db_modify:
         for f,d in index.items():
             if f == dictionary_key:
-                print(db_array[iteration])
-                db_array[iteration][dictionary_key] = dictionary_value
-                print(db_array[iteration][dictionary_key])
+                print(db_modify[iteration])
+                db_modify[iteration][dictionary_key] = dictionary_value
+                print(db_modify[iteration][dictionary_key])
                 dictionary_key = None
         iteration += 1
     if dictionary_key != None:
         print('Key is not defined')
-    print(db_array)
+    print(db_modify)
     
 
-def remove_db():
-    print(db_array)
+def remove_db(db_remove):
+    print(db_remove)
     dictionary_key = input('Key')
     iteration = 0
-    for index in db_array:
+    for index in db_remove:
         for f,d in index.items():
             if f == dictionary_key:
-                print(db_array[iteration])
-                db_array.pop(iteration)
+                print(db_remove[iteration])
+                db_remove.pop(iteration)
                 dictionary_key = None
         iteration += 1
     if dictionary_key != None:
         print('Key is not defined')
-    print(db_array)
+    print(db_remove)
 
 
 def main():
@@ -69,9 +69,9 @@ def main():
         if user_number_input == 1:
             create_db_element(db_array)
         elif user_number_input == 2:
-            modify_db()
+            modify_db(db_array)
         elif user_number_input == 3:
-            remove_db()
+            remove_db(db_array)
         elif user_number_input == 4:
             print(db_array)
         elif user_number_input == 5:
