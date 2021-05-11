@@ -24,6 +24,38 @@ def create_db_element(db_temp):
     db_array.append(add_dictionary_input)
     print(db_array)
 
+def modify_db():
+    print(db_array)
+    dictionary_key = input('Key')
+    dictionary_value = input('Value')
+    iteration = 0
+    for index in db_array:
+        for f,d in index.items():
+            if f == dictionary_key:
+                print(db_array[iteration])
+                db_array[iteration][dictionary_key] = dictionary_value
+                print(db_array[iteration][dictionary_key])
+                dictionary_key = None
+        iteration += 1
+    if dictionary_key != None:
+        print('Key is not defined')
+    print(db_array)
+
+def remove_db():
+    print(db_array)
+    dictionary_key = input('Key')
+    iteration = 0
+    for index in db_array:
+        for f,d in index.items():
+            if f == dictionary_key:
+                print(db_array[iteration])
+                db_array.pop(iteration)
+                dictionary_key = None
+        iteration += 1
+    if dictionary_key != None:
+        print('Key is not defined')
+    print(db_array)
+
 
 def main():
     db_array = []
@@ -33,36 +65,9 @@ def main():
         if user_number_input == 1:
             create_db_element(db_array)
         elif user_number_input == 2:
-            print(db_array)
-            dictionary_key = input('Key')
-            dictionary_value = input('Value')
-            iteration = 0
-            for index in db_array:
-                for f,d in index.items():
-                    if f == dictionary_key:
-                        print(db_array[iteration])
-                        db_array[iteration][dictionary_key] = dictionary_value
-                        print(db_array[iteration][dictionary_key])
-                        dictionary_key = None
-                iteration += 1
-            if dictionary_key != None:
-                print('Key is not defined')
-            print(db_array)
-
+            modify_db()
         elif user_number_input == 3:
-            print(db_array)
-            dictionary_key = input('Key')
-            iteration = 0
-            for index in db_array:
-                for f,d in index.items():
-                    if f == dictionary_key:
-                        print(db_array[iteration])
-                        db_array.pop(iteration)
-                        dictionary_key = None
-                iteration += 1
-            if dictionary_key != None:
-                print('Key is not defined')
-            print(db_array)
+            remove_db()
         elif user_number_input == 4:
             print(db_array)
         elif user_number_input == 5:
