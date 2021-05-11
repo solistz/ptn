@@ -17,12 +17,15 @@ def controller():
         else:
             print('Ви ввели щось не коректно :', user_number_input)
             print('Спробуйте ще раз :')
+
+
 def create_db_element(db_temp):
     add_dictionary_input = {}
     dictionaty_key = input('Введіть KEY : ')
     add_dictionary_input[dictionaty_key] = input('Ведіть Value : ')
     db_array.append(add_dictionary_input)
     print(db_array)
+
 
 def modify_db():
     print(db_array)
@@ -40,6 +43,7 @@ def modify_db():
     if dictionary_key != None:
         print('Key is not defined')
     print(db_array)
+    
 
 def remove_db():
     print(db_array)
