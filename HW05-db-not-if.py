@@ -1,6 +1,5 @@
 # Написать базу данных, где записи это массив словарей
 def controller():
-    while True:
         a = ('\n'
         '| 1 - Create '
         '| 2 - Modify Value'
@@ -10,13 +9,30 @@ def controller():
         '\n'
         )
         print(a)
-        user_number_input = input('Введіть число від 1 до 5: ')
-        if user_number_input.isdigit() and (int(user_number_input)>=1 and int(user_number_input)<=5):
-            user_number_input = int(user_number_input)
-            return user_number_input
-        else:
-            print('Ви ввели щось не коректно :', user_number_input)
+
+def input_in_user():
+    i=1
+    while True:
+        try:
+            user_number_input = int(input('Введіть число від 1 до 5: '))
+            break
+        except TypeError:
+            print('Ви ввели щось не коректно : T', user_number_input)
             print('Спробуйте ще раз :')
+        except KeyError:
+            print('Ви ввели щось не коректно : K', user_number_input)
+            print('Спробуйте ще раз :')
+        except ValueError:
+            print('Ви ввели щось не коректно : V', user_number_input)
+            print('Спробуйте ще раз :')
+        except UnboundLocalError:
+            print('Ви ввели щось не коректно : U', user_number_input)
+            print('Спробуйте ще раз :')
+        finally:
+            print('COOOOL')
+    # return int(user_number_input)
+
+
 
 
 def create_db_element(db_create):
@@ -70,21 +86,8 @@ def exit_db():
 
 
 def main():
-    db_array = []
-    while True:
-        user_number_input = '999'
-        user_number_input = controller()
-        if user_number_input == 1:
-            create_db_element(db_array)
-        elif user_number_input == 2:
-            modify_db(db_array)
-        elif user_number_input == 3:
-            remove_db(db_array)
-        elif user_number_input == 4:
-            view_db(db_array)
-        elif user_number_input == 5:
-            exit_db()
-
+    controller()
+    input_in_user()
     print('Finish')
 if __name__ == "__main__":
     main()
