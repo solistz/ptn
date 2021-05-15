@@ -11,11 +11,9 @@ def controller():
         print(a)
 
 def input_in_user():
-    i=1
     while True:
         try:
             user_number_input = int(input('Введіть число від 1 до 5: '))
-            break
         except TypeError:
             print('Ви ввели щось не коректно : T', user_number_input)
             print('Спробуйте ще раз :')
