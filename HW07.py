@@ -58,7 +58,6 @@ class Data_Base:
         print('view')
     
     def exit_data_base(self):
-        print('view')
         return 0
 
 
@@ -66,23 +65,22 @@ class Data_Base:
 def main():
     item = 1
     while item ==1:
-        test = user_number()
+        number = user_number()
         print('ви ввели', test)
 
         db = Data_Base()
 
-        if test == 1 :
+        if number == 1 :
             db.create_data_base()
-        elif test == 2:
+        elif number == 2:
             db.modyfi_data_base()
-        elif test == 3:
+        elif number == 3:
             db.remove_data_base()
-        elif test == 4:
+        elif number == 4:
             db.view_data_base()
-        elif test == 5:
-            ttt = db.exit_data_base()
-            print(ttt)
-            item = ttt
+        elif number == 5:
+            item_db_exit = db.exit_data_base()
+            item = item_db_exit
     
 if __name__ == '__main__':
     main()
