@@ -66,7 +66,7 @@ def main():
     item = 1
     while item ==1:
         number = user_number()
-        print('ви ввели', test)
+        print('ви ввели', number)
 
         db = Data_Base()
 
