@@ -47,15 +47,48 @@ class Data_Base:
 
     def create_data_base(self):
         print('create')
+        add_dictionary_input = {}
+        dictionaty_key = input('Введіть KEY : ')
+        add_dictionary_input[dictionaty_key] = input('Ведіть Value : ')
+        self.db_array.append(add_dictionary_input)
+        print(self.db_array)
 
     def modyfi_data_base(self):
         print('modify')
+        dictionary_key = input('Key')
+        dictionary_value = input('Value')
+        iteration = 0
+        for index in self.db_array:
+            for f,d in index.items():
+                if f == dictionary_key:
+                    print(self.db_array[iteration])
+                    self.db_array[iteration][dictionary_key] = dictionary_value
+                    print(self.db_array[iteration][dictionary_key])
+                    dictionary_key = None
+            iteration += 1
+        if dictionary_key != None:
+            print('Key is not defined')
+        print(self.db_array)
+
 
     def remove_data_base(self):
         print('delete')
+        dictionary_key = input('Key')
+        iteration = 0
+        for index in self.db_array:
+            for f,d in index.items():
+                if f == dictionary_key:
+                    print(self.db_array[iteration])
+                    self.db_array.pop(iteration)
+                    dictionary_key = None
+            iteration += 1
+        if dictionary_key != None:
+            print('Key is not defined')
+        print(self.db_array)
+
 
     def view_data_base(self):
-        print('view')
+        print(self.db_array)
     
     def exit_data_base(self):
         return 0
