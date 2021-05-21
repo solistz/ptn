@@ -97,12 +97,10 @@ class Data_Base:
 
 def main():
     item = 1
+    db = Data_Base()
     while item ==1:
         number = user_number()
         print('ви ввели', number)
-
-        db = Data_Base()
-
         if number == 1 :
             db.create_data_base()
         elif number == 2:
