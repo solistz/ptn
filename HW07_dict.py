@@ -25,7 +25,7 @@ def user_number():
             print('Ви ввели щось не коректно : U',e)
             print('Спробуйте ще раз :')
     return(user_number_input)
-class = Zodiak_class():
+class Zodiak_class:
 
     def zodiak_method(self):
         zodiak = [ # масив - словник - масив
