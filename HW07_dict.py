@@ -4,31 +4,14 @@
 # 4. Создать Pull Request
 # 5. Кинуть ссылку на PR Диме, чтобы он проверил и заапрувил.
 # 6. После аппрува - смерджить ветку в мастер (main)
-def user_number():
-    while True:
-        try:
-            user_number_input = int(input('Введіть число від 1 до 5: '))
-            break
-        except TypeError:
-            print('Ви ввели щось не коректно : T')
-            print('Спробуйте ще раз :')
-        except KeyError:
-            print('Ви ввели щось не коректно : K')
-            print('Спробуйте ще раз :')
-        except ValueError as e:
-            print('Ви ввели щось не коректно : V',e)
-            print('Спробуйте ще раз :')
-        except UnboundLocalError:
-            print('Ви ввели щось не коректно : U')
-            print('Спробуйте ще раз :')
-        except NameError as e:
-            print('Ви ввели щось не коректно : U',e)
-            print('Спробуйте ще раз :')
-    return(user_number_input)
-class Zodiak_class:
 
-    def zodiak_method(self):
-        zodiak = [ # масив - словник - масив
+class Zodiak_class:
+    def __init__(self,_days,_mounth):
+        self._days = _days
+        self._mounth = _mounth
+
+    def met_zodiak(self):
+        zodiak = [
             {'vodolei':[21,49]},
             {'fish':[50,80]},
             {'oven':[81,111]},
@@ -43,18 +26,24 @@ class Zodiak_class:
             {'kozerog':[357,365]},
             {'kozerog':[1,20]}
         ]
-        print(zodiak)
-    
 
     def mounth_method(self):
         mounth = [31,28,31,30,31,30,31,31,30,31,30,31]
-        print(mounth)
 
+    def met_print(self):
+        print(self._days)
+        print(self._mounth)
 
-
+    def met_print_zodiak(self):
+        # for item_zodiak in self.
+        pass
 
 
 def main():
-    zodiak_object = 
+    obj_zodiak = Zodiak_class(25,7)
+    # obj_zodiak.met_print()
+
+
+
 if __name__ == '__main__':
     main()
