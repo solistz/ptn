@@ -12,8 +12,10 @@
 from auto import *
 
 
+
 suzuki = Car('Suzuki','SX-4',2019,13500)
 suzuki.info()
+suzuki.user_data()
 
 fiat = Car('Fiat','Tipo',2019,11000)
 fiat.info()
