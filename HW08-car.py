@@ -15,8 +15,23 @@ from auto import *
 
 suzuki = Car('Suzuki','SX-4',2019,13500)
 suzuki.info()
-suzuki.user_data()
+print(suzuki.zapravka)
+# suzuki.user_data()
+suzuki.name = 'zap'
+print(suzuki.name)
+suzuki.lname = 'zh'
+print(suzuki.lname)
+
 
 fiat = Car('Fiat','Tipo',2019,11000)
 fiat.info()
+print(fiat.zapravka)
+# fiat.user_data()
+
+tesla = Electro('Tesla','M3',2018,150000)
+tesla.info()
+print(tesla.zapravka)
+
+
+
 

@@ -12,10 +12,12 @@ class Auto:
         self.kvt = self.cylinder * self.square
 
     def __pass_doc(self,tehpass,vincod):
+        self.lname = lname
         self.tehpass = tehpass
         self.vincod = vincod
 
     def user_data(self):
+        self.name = name
         self.__pass_doc(input('teh'),input('vin'))
         print(self.tehpass,self.vincod)
 
@@ -27,11 +29,11 @@ class Auto:
 
 
 class Car(Auto):
+    zapravka = "benzin"
     
     def __init__(self,brand,model,year,odometr):
         super().__init__(brand,model,year,odometr)
 
-    
         
     
 
@@ -43,7 +45,9 @@ class Track(Auto):
     pass
 
 class Electro(Car):
-
-    pass
+    zapravka = 'energy'
+    # self.zapravka = 'energy'
+    def __init__(self,brand,model,year,odometr):
+        super().__init__(brand,model,year,odometr)
 
 
